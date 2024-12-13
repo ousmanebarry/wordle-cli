@@ -16,24 +16,43 @@ Play the classic Wordle game directly in your terminal! Guess the secret five le
 
 ---
 
-## Installation and Usage
+## Installation
 
-### Step 1: Clone the Repository
+### Option 1: Install from PyPI (Recommended)
 
-First, clone the repository and navigate to the project directory:
+The easiest way to install and start playing is by using `pip`:
 
 ```bash
-git clone https://github.com/ousmanebarry/wordle-cli.git
-cd wordle-cli
+pip install pywordle-cli
 ```
 
-### Step 2: How to Run the Game
+Once installed, you can start the game by typing:
 
-1. Install the package:
+```bash
+wordle
+```
+
+---
+
+### Option 2: Install from Source
+
+If you'd like to install the package yourself, follow these steps:
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/ousmanebarry/wordle-cli.git
+   cd wordle-cli
+   ```
+
+2. Install the package:
+
    ```bash
    pip install .
    ```
-2. Start the game using the `wordle` command:
+
+3. Start the game:
+
    ```bash
    wordle
    ```
