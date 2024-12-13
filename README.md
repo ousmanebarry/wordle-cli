@@ -12,6 +12,7 @@ Play the classic Wordle game directly in your terminal! Guess the secret five le
 - **Command Support:**
   - `/list`: Display the status of all letters.
   - `/grid`: View your current guesses and their evaluations.
+  - `/end`: End the current wordle game.
 
 ---
 
@@ -53,6 +54,7 @@ cd wordle-cli
 
    - **`/list`:** Display the status of all letters.
    - **`/grid`:** View your current guesses and their evaluations.
+   - **`/end`:** End the current wordle game.
 
 3. **Winning the Game:**
    - Guess the secret word within six attempts to win.
