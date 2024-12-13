@@ -26,21 +26,6 @@ cd wordle-cli
 
 ### Step 2: Choose How to Run the Game
 
-You have two options to run the game:
-
-#### Option 1: Run Directly Using Python
-
-1. Navigate to the directory where the `wordle.py` file is located:
-   ```bash
-   cd wordle
-   ```
-2. Run the game using Python:
-   ```bash
-   python3 wordle.py
-   ```
-
-#### Option 2: Install the Package and Run Using the Command
-
 1. Install the package:
    ```bash
    pip install .
