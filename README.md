@@ -1,6 +1,6 @@
 # Wordle CLI Game
 
-Play the classic Wordle game directly in your terminal! Guess the secret five letter word within six attempts! 
+Play the classic Wordle game directly in your terminal! Guess the secret five letter word within six attempts!
 
 ![See how it looks like!](./game-example.png)
 
@@ -70,7 +70,7 @@ cd wordle-cli
 
 ## License
 
-This project is licensed under the MIT License. See the ![LICENSE](./LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
 
 ---
 
