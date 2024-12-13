@@ -1,6 +1,8 @@
 # Wordle CLI Game
 
-Play the classic Wordle game directly in your terminal! Guess the secret five letter word within six attempts! ![See how it looks like!](./game-example.png)
+Play the classic Wordle game directly in your terminal! Guess the secret five letter word within six attempts! 
+
+![See how it looks like!](./game-example.png)
 
 ## Features
 
