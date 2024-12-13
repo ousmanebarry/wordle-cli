@@ -3,7 +3,7 @@ import random, json, string
 from colorama import Fore
 
 class Letter:
-  def __init__(self, letter: str, state: bool):
+  def __init__(self, letter: str, state: str):
     self.letter = letter
     self.state = state
 
