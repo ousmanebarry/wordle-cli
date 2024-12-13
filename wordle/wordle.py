@@ -2,6 +2,9 @@ import importlib.resources
 import random, json, string
 from colorama import Fore
 
+WORD_LEN = 5
+TRIES_LEN = 6
+
 class Letter:
   def __init__(self, letter: str, state: str):
     self.letter = letter
@@ -17,16 +20,14 @@ class Wordle:
     self.word_found = False
     self.letters_green = set()
     self.letters_eliminated = set()
+    self.end_game = False
     self.letters_unused = uppercase_letters
     self.dictionary = dictionary
     self.secret_word = random_secret_word
+    self.commands = ["/LIST", "/GRID", "/END"]
 
-  def guess(self, word: str) -> None:
-    dictionary = self.dictionary
-    secret_word = self.secret_word
-    word = word.upper()
-
-    if word == "/LIST":
+  def run_command(self, command: str) -> None:
+    if command == "/LIST":
       build_str = ""
 
       for letter in self.letters_eliminated:
@@ -39,13 +40,23 @@ class Wordle:
         build_str += (Fore.WHITE + f"{letter} {Fore.RESET}")
       
       print(f"\n{build_str}\n")
-      return
 
-    if word == "/GRID":
+    if command == "/GRID":
       print(self)
+
+    if command == "/END":
+      self.end_game = True
+
+  def guess(self, word: str) -> None:
+    dictionary = self.dictionary
+    secret_word = self.secret_word
+    word = word.upper()
+
+    if word in self.commands:
+      self.run_command(word)
       return
 
-    if len(word) != 5:
+    if len(word) != WORD_LEN:
       print(Fore.RED + f"\nINVALID WORD!\nTOO LONG OR SHORT!\n{Fore.RESET}")
       return
     
@@ -110,12 +121,18 @@ def main():
   word_dictionary = set(data)
   wordle = Wordle(word_dictionary)
 
-  while not wordle.word_found and len(wordle.tries) != 6:
-    tries_remaining = 6 - len(wordle.tries)
+  while not wordle.word_found and len(wordle.tries) != TRIES_LEN:
+    if wordle.end_game:
+      print(Fore.RED + f"\nTHE GAME HAS ENDED!{Fore.RESET}")
+      break
+
+    tries_remaining = TRIES_LEN - len(wordle.tries)
     word = input(f"Guess a 5 letter word ({tries_remaining} tries left): ") 
     wordle.guess(word)
+  
+  tries_left = TRIES_LEN - len(wordle.tries)
 
-  if not wordle.word_found:
+  if tries_left == 0:
     print(Fore.RED + f"YOU RAN OUT OF TRIES!{Fore.RESET}")
   
   print(Fore.WHITE + f"THE SECRET WORD IS : {wordle.secret_word}!{Fore.RESET}")
