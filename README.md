@@ -24,7 +24,7 @@ git clone https://github.com/ousmanebarry/wordle-cli.git
 cd wordle-cli
 ```
 
-### Step 2: Choose How to Run the Game
+### Step 2: How to Run the Game
 
 1. Install the package:
    ```bash
