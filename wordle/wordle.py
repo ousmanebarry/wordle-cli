@@ -132,7 +132,7 @@ def main():
   
   tries_left = TRIES_LEN - len(wordle.tries)
 
-  if tries_left == 0:
+  if tries_left == 0 and not wordle.word_found:
     print(Fore.RED + f"YOU RAN OUT OF TRIES!{Fore.RESET}")
   
   print(Fore.WHITE + f"THE SECRET WORD IS : {wordle.secret_word}!{Fore.RESET}")
