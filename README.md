@@ -2,7 +2,7 @@
 
 Play the classic Wordle game directly in your terminal! Guess the secret five letter word within six attempts!
 
-![See how it looks like!](https://github.com/ousmanebarry/wordle-cli/blob/main/game-example.png)
+[See how it looks like!](https://github.com/ousmanebarry/wordle-cli/blob/main/game-example.png)
 
 ## Features
 
